@@ -20,19 +20,11 @@ class RightSide extends Component {
                   <a target="_blank" href="https://www.youtube.com/channel/UCm5nEOGuSLLL5m7mBuc_3Gg"><i className="fab fa-youtube"></i></a>
                   <a target="_blank" href=""><i className="fab fa-facebook"></i></a>
                 </div>
-                <div className="sideColors fullHeight">
-                  <div className="color1 fullWidth"></div>
-                  <div className="color2 fullWidth"></div>
-                  <div className="color3 fullWidth"></div>
-                </div>
+                <div className="sideColors fullHeight sideColorsTop"></div>
               </div>
 
               <div id="rightSideBottom" className="h50 fullWidth flexRow">
-                <div className="sideColors fullHeight">
-                  <div className="color4 fullWidth"></div>
-                  <div className="color5 fullWidth"></div>
-                  <div className="color6 fullWidth"></div>
-                </div>
+                <div className="sideColors fullHeight sideColorsBottom"></div>
 
                 <div id="videoSlideHolder" className="">
                   {videos.map(video => (
