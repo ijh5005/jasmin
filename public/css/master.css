@@ -1,24 +1,21 @@
 :root {
-  --bottomColor: #2b1509;
+  --bottomColor: #A77D4A;
+  /* #A98978; */
+  /* #5a2525; */
+  /* #865836; */
   --social: #656953;
-  --topColor: #9e715f;
+  --topColor: #310909;
+  /* #280606; */
+  /* #310909; */
 }
+
+/* b3833d */
+/* #483600; */
+/* #2b1509; */
+/* #FFDC74; */
+/* #9e715f; */
 
 /* general */
-.sideColors {
-  background-color: #d4b285;
-  position: absolute;
-  right: 0;
-  width: 2em;
-}
-
-.sideColors > * {
-  display: none;
-}
-
-.sideColors > * {
-  height: 33.34%;
-}
 
 /* container */
 #container {
@@ -55,11 +52,12 @@
 }
 
 #videoSlideHolder {
-  height: 16em;
+  height: 18em;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
   width: 95%;
+  align-items: flex-start;
 }
 
 
@@ -73,13 +71,26 @@
   display: inline-block;
   height: 14em;
   margin: 1em;
-  width: 18em;
+  width: 20em;
+  color: #fff;
+}
+
+.descriptionBox {
+  width: 20em;
+}
+
+.descriptionBox p {
+  width: 100%;
+  white-space: normal;
+  font-size: 1.1em;
 }
 
 /* leftSide */
 #leftSide {
   position: relative;
   width: 45vw;
+  background-image: url("../img/cropped/goldbackground.jpg");
+  background-size: 100% 100%;
 }
 
 #navBar {
@@ -89,18 +100,16 @@
 }
 
 #navBar > p {
-  font-size: 1.2em;
+  font-size: 1.6em;
   margin: 0 1em;
+  letter-spacing: 3px;
 }
 
 #homeImgBox {
   height: 100vh;
-  opacity: 0.6;
   position: absolute;
   top: 0;
-  /* justify-content: flex-start; */
   width: 50vw;
-  z-index: -1;
 }
 
 #homeImgBox img {
@@ -111,10 +120,11 @@
 }
 
 #name {
-  color: #2f221c;
+  color: #fff;
   font-size: 6em;
   font-weight: bolder;
   text-align: center;
+  z-index: 2;
 }
 
 #name2 {

@@ -1,3 +1,9 @@
-#selector {
+#socialMedia > a > i {
   transition: all 0.5s;
+}
+
+#socialMedia > a > i:hover {
+  transform: rotateY(-40deg);
+  perspective: 1000em;
+  color: #AE1E13;
 }

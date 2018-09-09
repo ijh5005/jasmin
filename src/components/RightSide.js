@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
 import { Consumer } from '../store';
+import { shortenText } from '../util/filter';
 
 class RightSide extends Component {
   state = {
@@ -10,26 +10,29 @@ class RightSide extends Component {
     return (
       <Consumer>
         {value => {
-          const { videos } = value;
+          const { videos, socialMedia } = value;
           return (
             <div id="rightSide" className="fullHeight flexCol">
               <div id="rightSideTop" className="h50 fullWidth flexCol">
                 <div id="socialMedia" className="flexRow">
-                  <a target="_blank" href="https://twitter.com/medusashowoff"><i className="fab fa-twitter"></i></a>
-                  <a target="_blank" href="https://www.instagram.com/medusashowoff/?hl=en"><i className="fab fa-instagram"></i></a>
-                  <a target="_blank" href="https://www.youtube.com/channel/UCm5nEOGuSLLL5m7mBuc_3Gg"><i className="fab fa-youtube"></i></a>
-                  <a target="_blank" href=""><i className="fab fa-facebook"></i></a>
+                  {socialMedia.map(socialMediaData => {
+                    if(socialMediaData.using){
+                      return <a key={socialMediaData.id} target="_blank" href={socialMediaData.link}><i className={socialMediaData.icon}></i></a>
+                    }
+                  })}
                 </div>
-                <div className="sideColors fullHeight sideColorsTop"></div>
               </div>
 
               <div id="rightSideBottom" className="h50 fullWidth flexRow">
-                <div className="sideColors fullHeight sideColorsBottom"></div>
-
                 <div id="videoSlideHolder" className="">
                   {videos.map(video => (
-                    <div className="videoBox">
-                      <iframe width="auto" height="100%" src={video} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div key={video.id}  className="videoBox">
+                      <div>
+                        <iframe width="auto" height="100%" src={video.link} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                      </div>
+                      <div className="descriptionBox flexRow">
+                        <p>{shortenText(video.text)}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
