@@ -1,9 +1,96 @@
-#socialMedia > a > i {
+#socialMedia > a > i,
+#landingPage {
   transition: all 0.5s;
+}
+
+#homeImgBox {
+  transition: 0.1s;
+}
+
+.landingName,
+.landingName2,
+#leftSide,
+#about {
+  transition: all 1s;
 }
 
 #socialMedia > a > i:hover {
   transform: rotateY(-40deg);
   perspective: 1000em;
-  color: #AE1E13;
+  color: #EFB519;
+}
+
+#landingPage.fadeOut {
+  opacity: 0;
+}
+
+#leftSide.small {
+  width: 45vw;
+  transition: all 1s;
+}
+
+#leftSide.smallLeft {
+  width: 50vw;
+  transition: all 1s;
+  left: 0;
+}
+
+.landingName {
+  position: relative;
+  left: 100vw;
+}
+
+.landingName2 {
+  position: relative;
+  right: 100vw;
+}
+
+.landingName,
+.landingName2 {
+  transition-timing-function: cubic-bezier(.23,.89,.94,.99);
+}
+
+.landingName.slideIn {
+  left: 0vw;
+}
+
+.landingName2.slideIn {
+  right: 0vw;
+}
+
+.landingName.slideOut {
+  left: -100vw;
+}
+
+.landingName2.slideOut {
+  right: -100vw;
+}
+
+#leftSide {
+  position: relative;
+  left: 45vw;
+}
+
+#leftSide.slideIn {
+  left: 0vw;
+}
+
+#homeImgBox {
+  transform: rotateZ(0deg) scale(1);
+}
+
+#homeImgBox.rotateLeft {
+  transform: rotateZ(-1deg);
+}
+
+#homeImgBox.rotateRight {
+  transform: rotateZ(1deg);
+}
+
+#homeImgBox.bigImg {
+  transform: scale(1.2);
+}
+
+#about.show {
+  right: 0vw;
 }
