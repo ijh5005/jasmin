@@ -6,6 +6,7 @@ import RightSide from './components/RightSide';
 import LeftSide from './components/LeftSide';
 import Landing from './components/Landing';
 import About from './components/About';
+import Service from './components/Service';
 
 class App extends Component {
   render() {
@@ -13,9 +14,10 @@ class App extends Component {
       <Provider>
         <div id="container" className="flexRow">
           <Landing />
-          <RightSide />
           <LeftSide />
+          <RightSide />
           <About />
+          <Service />
         </div>
       </Provider>
     );

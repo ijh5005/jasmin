@@ -9,8 +9,9 @@
 
 .landingName,
 .landingName2,
-#leftSide,
-#about {
+#rightSide,
+#about,
+#service {
   transition: all 1s;
 }
 
@@ -22,14 +23,15 @@
 
 #landingPage.fadeOut {
   opacity: 0;
+  z-index: -1;
 }
 
-#leftSide.small {
+#rightSide.small {
   width: 45vw;
   transition: all 1s;
 }
 
-#leftSide.smallLeft {
+#rightSide.smallLeft {
   width: 50vw;
   transition: all 1s;
   left: 0;
@@ -66,13 +68,17 @@
   right: -100vw;
 }
 
-#leftSide {
+#rightSide {
   position: relative;
   left: 45vw;
 }
 
-#leftSide.slideIn {
+#rightSide.slideIn {
   left: 0vw;
+}
+
+#rightSide.toRightSide {
+  left: -55vw;
 }
 
 #homeImgBox {
@@ -93,4 +99,12 @@
 
 #about.show {
   right: 0vw;
+}
+
+#about.showAboutPage {
+  right: 0vw;
+}
+
+#service.showServicePage {
+  left: 0vw;
 }

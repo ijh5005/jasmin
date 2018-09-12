@@ -1,8 +1,33 @@
 import React, { Component } from 'react';
 const Context = React.createContext();
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'ANIMATION':
+      return {
+        ...state,
+        animationClass: {
+          ...state.animationClass,
+          ...action.payload
+        }
+      }
+    case 'NAVIGATE':
+      return {
+        ...state,
+        currentPage: {
+          ...action.payload
+        }
+      }
+    default:
+      return state
+  }
+}
+
 export class Provider extends Component {
   state = {
+    dispatch: action => this.setState(state => reducer(state, action)),
+    animationClass: {},
+    currentPage: { home: 'selected' },
     videos: [
       {
         id: 1,
@@ -30,26 +55,29 @@ export class Provider extends Component {
         id: 1,
         link: "https://twitter.com/medusashowoff",
         icon: "fab fa-twitter",
-        using: true
+        using: true,
+        title: "title"
       },
       {
         id: 2,
         link: "https://www.instagram.com/medusashowoff/?hl=en",
         icon: "fab fa-instagram",
-        using: true
+        using: true,
+        title: "title"
       },
       {
         id: 3,
         link: "https://www.youtube.com/channel/UCm5nEOGuSLLL5m7mBuc_3Gg",
         icon: "fab fa-youtube",
-        using: true
+        using: true,
+        title: "title"
       },
-      ,
       {
         id: 4,
         link: "#",
         icon: "fab fa-facebook",
-        using: false
+        using: false,
+        title: "title"
       }
     ]
   }
