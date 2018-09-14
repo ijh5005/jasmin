@@ -1,5 +1,6 @@
 #socialMedia > a > i,
-#landingPage {
+#landingPage,
+.playButton > i {
   transition: all 0.5s;
 }
 
@@ -13,12 +14,6 @@
 #about,
 #service {
   transition: all 1s;
-}
-
-#socialMedia > a > i:hover {
-  transform: rotateY(-40deg);
-  perspective: 1000em;
-  color: #EFB519;
 }
 
 #landingPage.fadeOut {
@@ -107,4 +102,13 @@
 
 #service.showServicePage {
   left: 0vw;
+}
+
+#socialMedia > a > i:hover {
+  color: #EFB519;
+}
+
+.playButton:hover > i {
+  transform: scale(1.2);
+  opacity: 0;
 }

@@ -57,25 +57,20 @@ body {
 
 #socialMedia {
   justify-content: space-between;
-  height: 10em;
+  height: 12em;
   position: absolute;
   left: 0;
-  padding: 2em;
+  padding: 1em;
   top: 10%;
 }
 
 #socialMedia > a > i {
-  color: #A77D4A;
+  color: #A59178;
   font-size: 1.6em;
-  opacity: 0.4;
   transition: all 0.5s;
-}
-
-#socialMedia > a > i:hover {
-  transform: rotateY(-40deg);
-  perspective: 1000em;
-  color: #EFB519;
-  opacity: 1;
+  background-color: #260606;
+  padding: 0.4em;
+  border-radius: 50%;
 }
 
 .currentVideoBox {
@@ -135,14 +130,8 @@ body {
 
 .playButton > i {
   font-size: 8em;
-  transition: all 0.5s;
   position: relative;
   left: -20%;
-}
-
-.playButton:hover > i {
-  transform: scale(1.2);
-  opacity: 0;
 }
 
 .videoDescription {
@@ -188,7 +177,7 @@ body {
 #homeImgBox2 {
   height: 100vh;
   position: absolute;
-  top: 0;
+  top: 1em;
   width: 50vw;
   overflow: hidden;
 }
