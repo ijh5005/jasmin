@@ -12,32 +12,125 @@ class LeftSide extends Component {
         {value => {
           const { videos, socialMedia } = value;
           return (
-            <div id="leftSide" className="fullHeight flexCol">
-              <div id="leftSideTop" className="h50 fullWidth flexCol">
-                <div id='arrows' className='flexCol'><p>&#8605;</p><p>&#8605;</p><p>&#8605;</p><p>&#8605;</p></div>
-                <div id="socialMedia" className="flexRow">
-                  {socialMedia.map(socialMediaData => {
-                    if(socialMediaData.using){
-                      return <a key={socialMediaData.id} target="_blank" href={socialMediaData.link}><i className={socialMediaData.icon}></i></a>
-                    }
-                    return null;
-                  })}
-                </div>
+            <div className="leftSidePanel flexCol">
+              <div id="socialMedia" className="flexCol">
+                <i className="fab fa-twitter"></i>
+                <i className="fab fa-instagram"></i>
+                <i className="fab fa-youtube"></i>
               </div>
+              <div className="currentVideoBox">
 
-              <div id="leftSideBottom" className="h50 fullWidth flexRow">
-                <div id="videoSlideHolder" className="">
-                  {videos.map(video => (
-                    <div key={video.id}  className="videoBox">
-                      <div>
-                        <iframe title={video.title} width="auto" height="100%" src={video.link} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                      </div>
-                      <div className="descriptionBox flexRow">
-                        <p>{shortenText(video.text)}</p>
-                      </div>
-                    </div>
-                  ))}
+                <div className="videoBox show">
+
                 </div>
+
+              </div>
+              <div className="videoGalleryBox">
+
+                <div className="videoBoxImg flexCol">
+                  <div className="imgBox"></div>
+                  <div className="titleBox flexRow">
+                    <p>This is the title</p>
+                  </div>
+                  <div className="playButton flexRow">
+                    <i className="far fa-play-circle"></i>
+                  </div>
+                  <div className="videoDescription">
+                    <p>description of the videos that will be given to me by miss jasmin taylor burke :)!! description of the videos that will be given to me by miss jasmin taylor bur...</p>
+                  </div>
+                </div>
+
+                <div className="videoBoxImg flexCol">
+                  <div className="imgBox"></div>
+                  <div className="titleBox flexRow">
+                    <p>This is the title</p>
+                  </div>
+                  <div className="playButton flexRow">
+                    <i className="far fa-play-circle"></i>
+                  </div>
+                  <div className="videoDescription">
+                    <p>description of the videos that will be given to me by miss jasmin taylor burke :)!! description of the videos that will be given to me by miss jasmin taylor bur...</p>
+                  </div>
+                </div>
+
+                <div className="videoBoxImg flexCol">
+                  <div className="imgBox"></div>
+                  <div className="titleBox flexRow">
+                    <p>This is the title</p>
+                  </div>
+                  <div className="playButton flexRow">
+                    <i className="far fa-play-circle"></i>
+                  </div>
+                  <div className="videoDescription">
+                    <p>description of the videos that will be given to me by miss jasmin taylor burke :)!! description of the videos that will be given to me by miss jasmin taylor bur...</p>
+                  </div>
+                </div>
+
+                <div className="videoBoxImg flexCol">
+                  <div className="imgBox"></div>
+                  <div className="titleBox flexRow">
+                    <p>This is the title</p>
+                  </div>
+                  <div className="playButton flexRow">
+                    <i className="far fa-play-circle"></i>
+                  </div>
+                  <div className="videoDescription">
+                    <p>description of the videos that will be given to me by miss jasmin taylor burke :)!! description of the videos that will be given to me by miss jasmin taylor bur...</p>
+                  </div>
+                </div>
+
+                <div className="videoBoxImg flexCol">
+                  <div className="imgBox"></div>
+                  <div className="titleBox flexRow">
+                    <p>This is the title</p>
+                  </div>
+                  <div className="playButton flexRow">
+                    <i className="far fa-play-circle"></i>
+                  </div>
+                  <div className="videoDescription">
+                    <p>description of the videos that will be given to me by miss jasmin taylor burke :)!! description of the videos that will be given to me by miss jasmin taylor bur...</p>
+                  </div>
+                </div>
+
+                <div className="videoBoxImg flexCol">
+                  <div className="imgBox"></div>
+                  <div className="titleBox flexRow">
+                    <p>This is the title</p>
+                  </div>
+                  <div className="playButton flexRow">
+                    <i className="far fa-play-circle"></i>
+                  </div>
+                  <div className="videoDescription">
+                    <p>description of the videos that will be given to me by miss jasmin taylor burke :)!! description of the videos that will be given to me by miss jasmin taylor bur...</p>
+                  </div>
+                </div>
+
+                <div className="videoBoxImg flexCol">
+                  <div className="imgBox"></div>
+                  <div className="titleBox flexRow">
+                    <p>This is the title</p>
+                  </div>
+                  <div className="playButton flexRow">
+                    <i className="far fa-play-circle"></i>
+                  </div>
+                  <div className="videoDescription">
+                    <p>description of the videos that will be given to me by miss jasmin taylor burke :)!! description of the videos that will be given to me by miss jasmin taylor bur...</p>
+                  </div>
+                </div>
+
+                <div className="videoBoxImg flexCol">
+                  <div className="imgBox"></div>
+                  <div className="titleBox flexRow">
+                    <p>This is the title</p>
+                  </div>
+                  <div className="playButton flexRow">
+                    <i className="far fa-play-circle"></i>
+                  </div>
+                  <div className="videoDescription">
+                    <p>description of the videos that will be given to me by miss jasmin taylor burke :)!! description of the videos that will be given to me by miss jasmin taylor bur...</p>
+                  </div>
+                </div>
+
               </div>
             </div>
           )
