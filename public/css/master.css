@@ -64,14 +64,14 @@ body {
   top: 10%;
 }
 
-#socialMedia > i {
+#socialMedia > a > i {
   color: #A77D4A;
   font-size: 1.6em;
   opacity: 0.4;
   transition: all 0.5s;
 }
 
-#socialMedia > i:hover {
+#socialMedia > a > i:hover {
   transform: rotateY(-40deg);
   perspective: 1000em;
   color: #EFB519;

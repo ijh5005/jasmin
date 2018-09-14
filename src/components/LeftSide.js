@@ -14,9 +14,15 @@ class LeftSide extends Component {
           return (
             <div className="leftSidePanel flexCol">
               <div id="socialMedia" className="flexCol">
-                <i className="fab fa-twitter"></i>
-                <i className="fab fa-instagram"></i>
-                <i className="fab fa-youtube"></i>
+                <a target="_blank" href="https://twitter.com/medusashowoff">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/medusashowoff/?hl=en">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCm5nEOGuSLLL5m7mBuc_3Gg">
+                  <i class="fab fa-youtube"></i>
+                </a>
               </div>
               <div className="currentVideoBox">
 
